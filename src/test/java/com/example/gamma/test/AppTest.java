@@ -27,12 +27,21 @@ class AppTest {
         System.setOut(originalOut);
     }
     /**
-     * Rigorous Test.
+     * Rigorous Test of the first version of fizzbuzz with 15 numbers
      */
     @Test
     public void testFizz() {
         App.fizzBuzz(15);
         String expected = "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz";
+        assertEquals(expected,out.toString().trim());
+    }
+    /**
+     * Rigorous Test of the second version of fizzbuzz with 15 numbers
+    */
+    @Test
+    public void testFizzV2() {
+        App.fizzBuzzV2(15);
+        String expected = "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\nFizz\n14\nFizzBuzz";
         assertEquals(expected,out.toString().trim());
     }
 }
